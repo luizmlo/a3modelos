@@ -9,7 +9,6 @@ O projeto de Análise e Desenvolvimento de Sistemas tem como objetivo desenvolve
 O principal objetivo do projeto é criar um sistema eficiente e intuitivo que permita o registro, consulta e atualização de dados acadêmicos, proporcionando uma melhor organização e agilidade no processo de gestão escolar. Alguns objetivos específicos incluem:
 
 - Cadastro e manutenção de informações de alunos, como nome, matrícula, dados pessoais, etc.
-- Cadastro e manutenção de disciplinas oferecidas pela escola, incluindo informações como código, nome, carga horária, etc.
 - Registro de notas e frequência dos alunos em cada disciplina.
 - Geração de relatórios e estatísticas para auxiliar na tomada de decisões da equipe gestora.
 - Controle de acesso e permissões de usuários, garantindo a segurança e privacidade das informações.
