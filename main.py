@@ -1,23 +1,15 @@
 import streamlit as st
 from pymongo import MongoClient
 from streamlit_extras.switch_page_button import switch_page
-import yaml
+import os
 
 
-# Lendo as credenciais do arquivo credentials.txt
-with open('credentials.txt', 'r') as file:
-    lines = file.readlines()
-    print(lines)  # Verificar o conteúdo da lista lines
+username = os.environ.get('eduardojaworiwski')
+password = os.environ.get('EPNybNtTQ7kP5wqo')
+database_url = os.environ.get('cluster0.jb76ewp.mongodb.net')
+database_name = os.environ.get('gestao_escola')
 
-# Acesso aos elementos da lista lines
-username = lines[0].strip()
-password = lines[1].strip()
-database_url = lines[2].strip()
-database_name = lines[3].strip()
-    
-
-# Conexão com o MongoDB
-client = MongoClient(f"mongodb+srv://{username}:{password}@{database_url}")
+client = MongoClient(f"mongodb+srv://{username}:{password}@{database_url}/{database_name}")
 db = client[database_name]
 collection = db["users"]
 # Título da página
