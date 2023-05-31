@@ -5,17 +5,20 @@ import yaml
 
 
 # Lendo as credenciais do arquivo credentials.txt
-with open('credentials.txt') as file:
+with open('credentials.txt', 'r') as file:
     lines = file.readlines()
-    username = lines[1].strip()
-    password = lines[2].strip()
-    databaseM = lines [3].strip()
-    database_url = lines[4].strip()
+    print(lines)  # Verificar o conteúdo da lista lines
+
+# Acesso aos elementos da lista lines
+username = lines[0].strip()
+password = lines[1].strip()
+database_url = lines[2].strip()
+database_name = lines[3].strip()
     
 
 # Conexão com o MongoDB
 client = MongoClient(f"mongodb+srv://{username}:{password}@{database_url}")
-db = client[databaseM]
+db = client[database_name]
 collection = db["users"]
 # Título da página
 st.title("Bem vindo ao sistema de gestão escolar!")
