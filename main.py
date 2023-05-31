@@ -3,7 +3,7 @@ from pymongo import MongoClient
 from streamlit_extras.switch_page_button import switch_page
 import yaml
 
-with open('C:/Users/Eduardo Ferreira/Documents/GitHub/a3modelos/config.yaml') as file:
+with open('C:\\Users\\Eduardo Ferreira\\Documents\\GitHub\\a3modelos\\config.yaml') as file:
     config = yaml.safe_load(file)
 
 username = config['mongodb']['username']
