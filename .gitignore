@@ -1,4 +1,5 @@
 _pycache_/
 *.py[cod]
 *$py.class
-config.yaml
+.vscode/
+credentials.txt

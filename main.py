@@ -3,18 +3,20 @@ from pymongo import MongoClient
 from streamlit_extras.switch_page_button import switch_page
 import yaml
 
-with open('C:/Users/Eduardo Ferreira/Documents/GitHub/a3modelos/config.yaml') as file:
-    config = yaml.safe_load(file)
 
-username = config['mongodb']['username']
-password = config['mongodb']['password']
-database_url = config['mongodb']['url']
-database_name = config['mongodb']['database']
+# Lendo as credenciais do arquivo credentials.txt
+with open('credentials.txt') as file:
+    lines = file.readlines()
+    username = lines[1].strip()
+    password = lines[2].strip()
+    databaseM = lines [3].strip()
+    database_url = lines[4].strip()
+    
 
-client = MongoClient(f"mongodb+srv://{username}:{password}@{database_url}/{database_name}")
-db = client[database_name]
+# Conexão com o MongoDB
+client = MongoClient(f"mongodb+srv://{username}:{password}@{database_url}")
+db = client[databaseM]
 collection = db["users"]
-
 # Título da página
 st.title("Bem vindo ao sistema de gestão escolar!")
 st.text("Faça login ou crie uma conta para continuar.")
