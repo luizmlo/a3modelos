@@ -45,21 +45,3 @@ else:
             new_user = {"username": username, "password": password}
             collection.insert_one(new_user)
             st.success("Conta criada com sucesso!")
-            # Função para obter a hora atual
-
-
-def get_current_hour():
-    # Lógica para obter o horário atual
-    # ...
-    return 12  # Simulando a hora atual
-
-# Função para determinar a saudação com base na hora
-
-
-def get_greeting(hour):
-    if 6 <= hour < 12:
-        return "Bom dia"
-    elif 12 <= hour < 18:
-        return "Boa tarde"
-    else:
-        return "Boa noite"
