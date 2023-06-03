@@ -3,15 +3,9 @@ import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
 from pymongo import MongoClient
 
-# import streamlit as st
-from streamlit_extras.switch_page_button import switch_page
-
 # Título da página
-st.title("Lobby")
-
-# Mensagem de boas-vindas
-st.write("Bem-vindo ao lobby!")
-
+st.title("Lobby para professores")
+st.header("Bem vindo professor" )
 st.write("O que você deseja fazer hoje?")
 lobby_option = st.selectbox(
     "Escolha uma opção:",
